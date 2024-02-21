@@ -23,15 +23,15 @@ GLOBAL_LIST_INIT(string_to_severity, list(	//Config compatibility thing
 ))
 
 GLOBAL_LIST_INIT(event_delay_lower, list(  //redacted by /datum/config_entry/keyed_list/event_delay_lower
-	EVENT_LEVEL_MUNDANE = 10 MINUTES,
-	EVENT_LEVEL_MODERATE = 30 MINUTES,
-	EVENT_LEVEL_MAJOR = 50 MINUTES
+	EVENT_LEVEL_MUNDANE = 100 MINUTES,
+	EVENT_LEVEL_MODERATE = 300 MINUTES,
+	EVENT_LEVEL_MAJOR = 500 MINUTES
 ))
 
 GLOBAL_LIST_INIT(event_delay_upper, list( //redacted by /datum/config_entry/keyed_list/event_delay_upper
-	EVENT_LEVEL_MUNDANE = 10 MINUTES,
-	EVENT_LEVEL_MODERATE = 45 MINUTES,
-	EVENT_LEVEL_MAJOR = 70 MINUTES
+	EVENT_LEVEL_MUNDANE = 100 MINUTES,
+	EVENT_LEVEL_MODERATE = 450 MINUTES,
+	EVENT_LEVEL_MAJOR = 700 MINUTES
 ))
 
 GLOBAL_LIST_EMPTY(event_last_fired)

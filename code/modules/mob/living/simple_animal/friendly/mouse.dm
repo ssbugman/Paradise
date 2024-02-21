@@ -60,7 +60,7 @@
 				else
 					visible_message("<span class='warning'>[src] chews through [C].</span>")
 				investigate_log("was chewed through by a mouse at [COORD(F)]", INVESTIGATE_WIRES)
-				C.deconstruct()
+				//C.deconstruct()
 
 /mob/living/simple_animal/mouse/handle_automated_speech()
 	..()
