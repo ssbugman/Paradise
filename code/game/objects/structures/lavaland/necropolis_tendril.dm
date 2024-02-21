@@ -41,8 +41,8 @@
 		/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/icewing/tendril = 1,
 		/mob/living/simple_animal/hostile/asteroid/marrowweaver/tendril = 20
 	)
-	max_mobs = 5
-	spawn_time = 250 //they spawn a little faster
+	max_mobs = 3
+	spawn_time = 400 //they spawn a little faster
 	mob_gps_id = "RND"
 
 /obj/structure/spawner/lavaland/random_threat/dangerous //rare
@@ -57,8 +57,8 @@
 		/mob/living/simple_animal/hostile/asteroid/marrowweaver/frost/tendril = 14
 	)
 	mob_gps_id = "CHAOS"
-	max_mobs = 7
-	spawn_time = 150
+	max_mobs = 3
+	spawn_time = 400
 
 GLOBAL_LIST_INIT(tendrils, list())
 
@@ -117,7 +117,7 @@ GLOBAL_LIST_INIT(tendrils, list())
 	visible_message("<span class='boldannounce'>The tendril writhes in fury as the earth around it begins to crack and break apart! Get back!</span>")
 	visible_message("<span class='warning'>Something falls free of the tendril!</span>")
 	playsound(loc, 'sound/effects/tendril_destroyed.ogg', 200, FALSE, 50, TRUE, TRUE)
-	addtimer(CALLBACK(src, PROC_REF(collapse)), 50)
+	addtimer(CALLBACK(src, PROC_REF(collapse)), 250)
 
 /obj/effect/collapse/Destroy()
 	QDEL_NULL(emitted_light)
@@ -128,7 +128,7 @@ GLOBAL_LIST_INIT(tendrils, list())
 		shake_camera(M, 15, 1)
 	playsound(get_turf(src),'sound/effects/explosionfar.ogg', 200, TRUE)
 	visible_message("<span class='boldannounce'>The tendril falls inward, the ground around it widening into a yawning chasm!</span>")
-	for(var/turf/T in range(2,src))
+	for(var/turf/T in range(1,src))
 		if(!T.density)
-			T.TerraformTurf(/turf/simulated/floor/chasm/straight_down/lava_land_surface)
+			T.TerraformTurf(/turf/simulated/floor/plating/lava)
 	qdel(src)

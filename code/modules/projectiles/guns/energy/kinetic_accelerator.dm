@@ -20,7 +20,7 @@
 	knife_x_offset = 20
 	knife_y_offset = 12
 
-	var/max_mod_capacity = 100
+	var/max_mod_capacity = 1000
 	var/list/modkits = list()
 
 	var/recharge_timerid
@@ -164,7 +164,7 @@
 	icon_state = "kineticgun_h"
 	item_state = "kineticgun_h"
 	origin_tech = "combat=5;powerstorage=3;engineering=5"
-	max_mod_capacity = 150
+	max_mod_capacity = 1500
 
 /obj/item/gun/energy/kinetic_accelerator/mega
 	name = "magmite proto-kinetic accelerator"
@@ -173,7 +173,7 @@
 	empty_state = "kineticgun_m_empty"
 	desc = "A self recharging, ranged mining tool that does increased damage in low pressure. This one has been enhanced with plasma magmite."
 	origin_tech = "combat=5;powerstorage=3;engineering=5"
-	max_mod_capacity = 200
+	max_mod_capacity = 2000
 	trigger_guard = TRIGGER_GUARD_ALLOW_ALL
 
 
