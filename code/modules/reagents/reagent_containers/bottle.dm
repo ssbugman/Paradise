@@ -341,6 +341,13 @@
 	icon_state = "round_bottle"
 	spawned_disease = /datum/disease/virus/advance/preset/advanced_regeneration
 
+/obj/item/reagent_containers/glass/bottle/super_regeneration
+	name = "Super Neogenesis culture bottle"
+	desc = "A small bottle. Contains Advanced Neogenesis culture in synthblood medium."
+	icon_state = "round_bottle"
+	spawned_disease = /datum/disease/virus/advance/preset/super_regeneration
+
+
 /obj/item/reagent_containers/glass/bottle/stealth_necrosis
 	name = "Necroeyrosis culture bottle"
 	desc = "A small bottle. Contains Necroeyrosis culture in synthblood medium."

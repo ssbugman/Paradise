@@ -147,9 +147,9 @@
 	if(.)
 		var/mob/living/L = target
 		if(istype(L) && !isrobot(L))
-			L.AdjustWeakened(1 SECONDS)
+			//L.AdjustWeakened(1 SECONDS)
 			L.Slowed(3 SECONDS)
-			L.Confused(3 SECONDS)
+			//L.Confused(3 SECONDS)
 
 
 /obj/item/projectile/temp/basilisk/magmawing
@@ -170,7 +170,7 @@
 			L.IgniteMob()
 			if(L.getFireLoss() > 50)
 				explosion(L.loc, 0, 0, 0, 0, flame_range = 3)
-				L.AdjustWeakened(1 SECONDS)
+				//L.AdjustWeakened(1 SECONDS)
 
 /obj/item/projectile/temp/basilisk/icewing
 	damage = 5

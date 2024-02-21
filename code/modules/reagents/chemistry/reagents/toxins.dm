@@ -491,7 +491,7 @@
 	var/update_flags = STATUS_UPDATE_NONE
 	update_flags |= M.adjustToxLoss(1, FALSE)
 	M.damageoverlaytemp = 60
-	M.EyeBlurry(6 SECONDS)
+	//M.EyeBlurry(6 SECONDS)
 	return ..() | update_flags
 
 /datum/reagent/beer2	//disguised as normal beer for use by emagged service borgs

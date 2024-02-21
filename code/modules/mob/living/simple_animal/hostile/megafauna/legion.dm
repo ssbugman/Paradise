@@ -107,7 +107,7 @@ Difficulty: Medium
 		var/mob/living/L = target
 		if(L.stat == UNCONSCIOUS)
 			var/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/A = new(loc)
-			A.infest(L)
+			//A.infest(L)
 
 /mob/living/simple_animal/hostile/megafauna/legion/OpenFire(the_target)
 	if(world.time >= ranged_cooldown && !charging)

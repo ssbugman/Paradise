@@ -34,7 +34,7 @@ Bonus
 					to_chat(M, span_notice(pick("Your body feels tough.", "You are feeling on edge.")))
 	if(A.stage > 4 && M.health <= HEALTH_THRESHOLD_CRIT)
 		M.reagents.add_reagent("epinephrine", 0.5)
-	if(M.reagents.get_reagent_amount("epinephrine") > 20)
-		var/obj/item/organ/internal/heart/heart = M.get_int_organ(/obj/item/organ/internal/heart)
-		heart?.receive_damage(1)
+	//if(M.reagents.get_reagent_amount("epinephrine") > 20)
+	//	var/obj/item/organ/internal/heart/heart = M.get_int_organ(/obj/item/organ/internal/heart)
+	//	heart?.receive_damage(1)
 	return

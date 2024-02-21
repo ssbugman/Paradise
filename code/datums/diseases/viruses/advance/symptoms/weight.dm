@@ -38,3 +38,24 @@ Bonus
 				to_chat(M, span_warning("<i>[pick("So hungry...", "You'd kill someone for a bite of food...", "Hunger cramps seize you...")]</i>"))
 				M.overeatduration = max(M.overeatduration - 100, 0)
 				M.adjust_nutrition(-100)
+
+/datum/symptom/weight_even
+
+	name = "Weight Even"
+	id = "weight_even"
+	stealth = -3
+	resistance = 2
+	stage_speed = 2
+	transmittable = -2
+	level = 3
+
+/datum/symptom/weight_even/Activate(datum/disease/virus/advance/A)
+	..()
+	if(prob(SYMPTOM_ACTIVATION_PROB))
+		var/mob/living/M = A.affected_mob
+		switch(A.stage)
+			if(1, 2, 3, 4)
+				to_chat(M, span_warning(pick("You feel hungry.", "You crave for food.")))
+			else
+				M.overeatduration = max(M.overeatduration - 100, 0)
+				M.set_nutrition(550)

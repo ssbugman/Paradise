@@ -252,10 +252,10 @@
 	var/can_infest_dead = FALSE
 
 /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/Life(seconds, times_fired)
-	if(isturf(loc) && can_infest)
-		for(var/mob/living/carbon/human/H in view(src,1)) //Only for corpse right next to/on same tile
-			if(H.stat == UNCONSCIOUS || (can_infest_dead && H.stat == DEAD))
-				infest(H)
+	//if(isturf(loc) && can_infest)
+	//	for(var/mob/living/carbon/human/H in view(src,1)) //Only for corpse right next to/on same tile
+	//		if(H.stat == UNCONSCIOUS || (can_infest_dead && H.stat == DEAD))
+	//			infest(H)
 	..()
 
 /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/AttackingTarget()
@@ -263,7 +263,7 @@
 	if(!isobj(target))
 		var/mob/living/carbon/human/victim = target
 		if(victim.can_inject(null, FALSE, BODY_ZONE_CHEST, FALSE, TRUE) && !victim.get_int_organ(/obj/item/organ/internal/legion_tumour) && prob(1))
-			new /obj/item/organ/internal/legion_tumour(victim)
+			//new /obj/item/organ/internal/legion_tumour(victim)
 			visible_message(span_userdanger("[src] вгрызается в шею [target], впрыскивая странную черную жидкость!</span>")) //made it on russian to attract more attention from attacklogs
 
 /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/proc/infest(mob/living/carbon/human/H)

@@ -104,8 +104,6 @@
 		if(L.stat != DEAD)
 			if(!client && ranged && ranged_cooldown <= world.time)
 				OpenFire(L)
-		else
-			devour(L)
 
 /mob/living/simple_animal/hostile/megafauna/onTransitZ(old_z, new_z)
 	. = ..()

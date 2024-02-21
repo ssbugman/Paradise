@@ -40,6 +40,12 @@
 	name = "Advanced Neogenesis"
 	symptoms = list(new/datum/symptom/heal, new/datum/symptom/damage_converter, new/datum/symptom/viralevolution)
 
+// Toxic Filter + Toxic Compensation + Viral Evolutionary Acceleration
+/datum/disease/virus/advance/preset/super_regeneration
+	name = "Super Neogenesis"
+	symptoms = list(new/datum/symptom/heal, new/datum/symptom/damage_converter, new/datum/symptom/painkiller, new/datum/symptom/oxygen, new/datum/symptom/weight_even, new/datum/symptom/epinephrine)
+	stage_prob = 6
+
 // Necrotizing Fasciitis + Viral Self-Adaptation + Eternal Youth + Dizziness
 /datum/disease/virus/advance/preset/stealth_necrosis
 	name = "Necroeyrosis"

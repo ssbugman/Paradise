@@ -564,7 +564,7 @@
 	SetDeaf(0)
 	heal_overall_damage(1000, 1000)
 	ExtinguishMob()
-	CureAllDiseases(FALSE)
+	//CureAllDiseases(FALSE)
 	fire_stacks = 0
 	on_fire = 0
 	suiciding = 0
